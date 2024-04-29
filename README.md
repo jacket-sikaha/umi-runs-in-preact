@@ -1,2 +1,7 @@
+# README
+
 # umi-runs-in-preact
-尝试在umi项目使用preact
+
+尝试在 umi 项目使用 preact
+
+`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://umijs.org/docs/max/introduce)
