@@ -15,9 +15,14 @@
     "@ant-design/pro-components": "^2.4.4",
     "@babel/preset-react": "^7.24.1",
     "@umijs/max": "^4.1.10",
-    "antd": "^5.4.0"
+    "antd": "^5.4.0",
+    "preact": "^10.20.2",
+    "preact-render-to-string": "^6.4.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "husky": "^9",

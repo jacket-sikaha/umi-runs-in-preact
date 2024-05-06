@@ -6,6 +6,7 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
+  hash: true,
   layout: {
     title: '@umijs/max',
   },
@@ -30,6 +31,26 @@ export default defineConfig({
       component: './Table',
     },
   ],
+  analyze: {},
+  chainWebpack: (memo, { webpack, env }) => {
+    // 配置别名，对 import 语句的 source 做映射。
+    memo.resolve.alias
+      .set('react', 'preact/compat')
+      .set('react-dom/test-utils', 'preact/test-utils')
+      .set('react-dom', 'preact/compat')
+      .set('react/jsx-runtime', 'preact/jsx-runtime');
+    return memo;
+  },
+  // extraBabelPresets: [
+  //   [
+  //     '@babel/preset-react',
+  //     {
+  //       pragma: 'h',
+  //       pragmaFrag: 'Fragment',
+  //       // runtime: 'automatic', // defaults to classic
+  //       development: true,
+  //     },
+  //   ],
+  // ],
   npmClient: 'pnpm',
 });
-
